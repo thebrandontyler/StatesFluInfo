@@ -13,6 +13,8 @@
 		FD58B9D42821BD5B00A3F591 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD58B9D32821BD5B00A3F591 /* Preview Assets.xcassets */; };
 		FD58B9DB2821C4A800A3F591 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58B9DA2821C4A800A3F591 /* NetworkManager.swift */; };
 		FD58B9DD2821C50200A3F591 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58B9DC2821C50200A3F591 /* Model.swift */; };
+		FD58B9E328222B6F00A3F591 /* StatesDetailsLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58B9E228222B6F00A3F591 /* StatesDetailsLink.swift */; };
+		FD58B9E52822DE9F00A3F591 /* StateInfoLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58B9E42822DE9E00A3F591 /* StateInfoLink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		FD58B9D32821BD5B00A3F591 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FD58B9DA2821C4A800A3F591 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FD58B9DC2821C50200A3F591 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		FD58B9E228222B6F00A3F591 /* StatesDetailsLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesDetailsLink.swift; sourceTree = "<group>"; };
+		FD58B9E42822DE9E00A3F591 /* StateInfoLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateInfoLink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			children = (
 				FD58B9CC2821BD5800A3F591 /* StatesFluInfoApp.swift */,
 				FD58B9CE2821BD5800A3F591 /* ContentView.swift */,
+				FD58B9E42822DE9E00A3F591 /* StateInfoLink.swift */,
+				FD58B9E228222B6F00A3F591 /* StatesDetailsLink.swift */,
 				FD58B9DA2821C4A800A3F591 /* NetworkManager.swift */,
 				FD58B9DC2821C50200A3F591 /* Model.swift */,
 				FD58B9D02821BD5B00A3F591 /* Assets.xcassets */,
@@ -143,6 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD58B9E328222B6F00A3F591 /* StatesDetailsLink.swift in Sources */,
+				FD58B9E52822DE9F00A3F591 /* StateInfoLink.swift in Sources */,
 				FD58B9DB2821C4A800A3F591 /* NetworkManager.swift in Sources */,
 				FD58B9CF2821BD5800A3F591 /* ContentView.swift in Sources */,
 				FD58B9CD2821BD5800A3F591 /* StatesFluInfoApp.swift in Sources */,

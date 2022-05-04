@@ -12,6 +12,10 @@ class DataTaskManager: ObservableObject {
     @Published var dataToView: [FluVaccineInfo] = []
     var cancellables: Set<AnyCancellable> = []
     
+    init() {
+        fetch()
+    }
+    
     func fetch() {
         let url = URL(string: "https://data.cdc.gov/resource/h7pm-wmjc.json")!
         URLSession.shared.dataTaskPublisher(for: url)

@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
     @State var searchText = ""
     @StateObject var dataTaskManager = DataTaskManager()
@@ -15,21 +14,31 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List{
-                ForEach(dataTaskManager.dataToView, id: \.self) {state in
+                
+                ForEach(dataTaskManager.dataToView, id: \.self) { state in
                     if validateResponse(var1: state.dimension, var2: state.year_season) {
-                        HStack{
-                            Text(state.geography)
-                            Text(state.year_season)
+                        NavigationLink(destination: StateInfoLink(fluVaccine: state)) {
+                            HStack{
+                                Text(state.geography)
+                                Text(state.year_season)
+                            }
                         }
                     }
                 }
             }
+
             .searchable(text: $searchText, prompt: "Look for a state")
+//            ForEach(dataTaskManager.searchSuggestions) { suggestion in
+//                Text(suggestion.geography)searchCompletion(suggestion.geography)
+//            }
             .navigationTitle("States Statistics")
+            .refreshable {
+                dataTaskManager.dataToView = []
+                dataTaskManager.fetch()
+            }
         }
         .onSubmit (of: .search)
         {
-            dataTaskManager.fetch()
             dataTaskManager.searchFetch(searchTerm: searchText)
         }
     }
@@ -41,8 +50,6 @@ struct ContentView: View {
             return false
         }
     }
-    
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
