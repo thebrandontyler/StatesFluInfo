@@ -33,21 +33,21 @@ class DataTaskManager: ObservableObject {
             .store(in: &cancellables)
     }
     
-    func searchFetch(searchTerm: String) {
-        let url = URL(string: "https://data.cdc.gov/resource/h7pm-wmjc.json?geography=\(searchTerm)")!
-        URLSession.shared.dataTaskPublisher(for: url)
-            .map { $0.data }
-            .decode(type: [FluVaccineInfo].self, decoder: JSONDecoder())
-            .receive(on: RunLoop.main)
-            .sink { completion in
-                if case .failure(let error) = completion {
-                    print("Error: \(error.localizedDescription)")
-                }
-            } receiveValue: { [unowned self] response in
-                dataToView = response
-                print(response)
-            }
-            .store(in: &cancellables)
-    }
+//    func searchFetch(searchTerm: String) {
+//        let url = URL(string: "https://data.cdc.gov/resource/h7pm-wmjc.json?geography=\(searchTerm)")!
+//        URLSession.shared.dataTaskPublisher(for: url)
+//            .map { $0.data }
+//            .decode(type: [FluVaccineInfo].self, decoder: JSONDecoder())
+//            .receive(on: RunLoop.main)
+//            .sink { completion in
+//                if case .failure(let error) = completion {
+//                    print("Error: \(error.localizedDescription)")
+//                }
+//            } receiveValue: { [unowned self] response in
+//                dataToView = response
+//                print(response)
+//            }
+//            .store(in: &cancellables)
+//    }
     
 }
